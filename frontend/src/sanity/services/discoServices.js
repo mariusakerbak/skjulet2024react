@@ -5,7 +5,11 @@ export const fetchDisco = async () => {
     return disco
 }
 
+
 export const fetchSong = async (slug) => {
-    const song = await client.fetch(`*[_type == "song" && slug.current == $slug]{...}`,{slug})
+    const song =  await client.fetch(`*[_type == "song" && slug.current == $slug][0] {
+        title, markerfile, lyrics, spotify, 
+        "album": *[_type == "album" && ^._id in tracks[]._ref][0]{title, "songs": tracks[]->}
+    }`, {slug})
     return song
 }

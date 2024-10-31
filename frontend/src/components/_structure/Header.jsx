@@ -13,7 +13,7 @@ export default function Header() {
           </nav>
           <nav className="flex flex-row justify-between items-center">
             <Link to={`/sangbok`} className="rounded hover:bg-umber duration-1000 transition ease-in-out p-2">Sangene</Link>
-            <Link to={`/om`} className="rounded hover:bg-umber duration-1000 transition ease-in-out p-2">Om Skjulet</Link>
+            <Link to={`/om-skjulet`} className="rounded hover:bg-umber duration-1000 transition ease-in-out p-2">Om Skjulet</Link>
           </nav>
         </header>)
 }
